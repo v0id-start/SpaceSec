@@ -40,16 +40,8 @@ public class StarLock implements Lock {
      * @return new decrypted Message
      */
     public Message decrypt(Message message) {
-        String encryptedText = message.getMessageText();
-        String decryptedText = "";
-
-        for (int i = 0; i < encryptedText.length(); i++) {
-            if (encryptedText.charAt(i) != '*') {
-                decryptedText += encryptedText.charAt(i);
-            }
-        }
-
-        return new Message(decryptedText);
+        // TODO REPLACE THIS
+        return message;
     }
 
     /**

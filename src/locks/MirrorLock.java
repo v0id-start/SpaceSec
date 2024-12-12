@@ -22,10 +22,8 @@ public class MirrorLock implements Lock {
      * @return encrypted Message according to reversal encryption algorithm
      */
     public Message encrypt(Message message) {
-        String originalText = message.getMessageText();
-        String encryptedText = reverseString(originalText);
-
-        return new Message(encryptedText);
+        // TODO REPLACE THIS
+        return message;
     }
 
     /**
@@ -35,10 +33,8 @@ public class MirrorLock implements Lock {
      * @return decrypted, original Message
      */
     public Message decrypt(Message message) {
-        String encryptedText = message.getMessageText();
-        String decryptedText = reverseString(encryptedText);
-
-        return new Message(decryptedText);
+        // TODO REPLACE THIS
+        return message;
     }
 
     /**
@@ -52,11 +48,5 @@ public class MirrorLock implements Lock {
      * It would be nice if there was a way to reuse a repetitive algorithm that shows up more than once....
      *  Maybe one day they will add that...
      */
-    private String reverseString(String s) {
-        String reversed = "";
-        for (int i = s.length() - 1; i >= 0; i--) {
-            reversed += s.charAt(i);
-        }
-        return reversed;
-    }
+
 }

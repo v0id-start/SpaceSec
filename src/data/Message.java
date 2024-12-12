@@ -22,7 +22,9 @@ public class Message {
      * @param text initial message text
      */
     public Message(String text) {
-        this.messageText = text;
+        // TODO Implement this!
+        System.out.println("MESSAGE CONSTRUCTOR NOT IMPLEMENTED");
+        this.messageText = null;
     }
 
 
@@ -33,7 +35,9 @@ public class Message {
      * @return the internal String message text from this Message
      */
     public String getMessageText() {
-        return this.messageText;
+        // TODO Implement this!
+        System.out.println("MESSAGE GETTER NOT IMPLEMENTED");
+        return null;
     }
 
     /**

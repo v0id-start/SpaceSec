@@ -38,14 +38,8 @@ public class EchoLock implements Lock {
      * @return decrypted original Message
      */
     public Message decrypt(Message message) {
-        String encryptedText = message.getMessageText();
-        String decryptedText = "";
-
-        for (int i = 0; i < encryptedText.length(); i += 500) {
-            decryptedText += encryptedText.charAt(i);
-        }
-
-        return new Message(decryptedText);
+        // TODO REPLACE THIS
+        return message;
     }
 
     /**

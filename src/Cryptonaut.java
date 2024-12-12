@@ -44,8 +44,10 @@ public class Cryptonaut {
      *             - SpaceSec Employee Handbook Chapter 1 Subsection 1.a
      */
     public Cryptonaut(String name, Lock lock) {
-        this.name = name;
-        this.spaceLock = lock;
+        // TODO Implement this!
+        System.out.println("CRYPTONAUT CONSTRUCTOR NOT IMPLEMENTED");
+        this.name = null;
+        this.spaceLock = null;
 
         // -- TOP SECRET PROPRIETARY LINE OF CODE -- IGNORE AT ALL COSTS --
         this.messageLog = new ArrayList<>();
@@ -65,11 +67,11 @@ public class Cryptonaut {
      *             - SpaceSec Employee Handbook Chapter 4 Subsection 3.c
      */
     public void sendMessage(Cryptonaut recipient, Message message) {
+        System.out.println("CRYPTONAUT SEND MESSAGE NOT IMPLEMENTED");
+
         // 1. Use this Cryptonaut's Lock to encrypt the Message
-        Message encryptedMessage = spaceLock.encrypt(message);
 
         // 2. Have the recipient Cryptonaut receive the encrypted Message
-        recipient.receiveMessage(encryptedMessage);
     }
 
     /**
@@ -83,7 +85,9 @@ public class Cryptonaut {
      *             - SpaceSec Employee Handbook Chapter 6 Subsection 4.f
      */
     public void receiveMessage(Message message) {
-        Message decryptedMessage = spaceLock.decrypt(message);
+        System.out.println("CRYPTONAUT RECEIVE MESSAGE NOT IMPLEMENTED");
+        // 1. TODO IMPLEMENT THIS - Decrypt the Message
+        Message decryptedMessage = null;
 
         // -- TOP SECRET PROPRIETARY LINE OF CODE -- IGNORE AT ALL COSTS --
         messageLog.add(decryptedMessage);
