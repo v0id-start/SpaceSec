@@ -1,10 +1,22 @@
 package locks;
 import data.Message;
 
+/**
+ * This Lock inserts stars before every character.
+ * This Lock hinges on the the laziness of the average Message interceptor.
+ */
 public class StarLock implements Lock {
 
-    /*
-    Returns an encrypted Message
+
+    /**
+     * This Lock encrypts by adding 100 stars before every single character.
+     * E.g. "hello" -> "*h*e*l*l*o" (where each star is 100 stars in a row)
+     *
+     * "This job makes me see stars, sometimes..."
+     *      - SpaceSec Employee 413251 after 42 hours on star-watching duty.
+     *
+     * @param message to encrypt
+     * @return new encrypted Message
      */
     public Message encrypt(Message message) {
         String originalText = message.getMessageText();
@@ -21,8 +33,11 @@ public class StarLock implements Lock {
         return new Message(encryptedText);
     }
 
-    /*
-    Returns a decrypted, plaintext Message
+    /**
+     * Undo the Star Encryption algorithm to return the text to the original.
+     *
+     * @param message to decrypt
+     * @return new decrypted Message
      */
     public Message decrypt(Message message) {
         String encryptedText = message.getMessageText();
@@ -35,6 +50,13 @@ public class StarLock implements Lock {
         }
 
         return new Message(decryptedText);
+    }
+
+    /**
+     * -- PROPRIETARY SPACESEC CODE -- IGNORE AT ALL COSTS --
+     */
+    public String getName() {
+        return "STAR LOCK";
     }
 
 }
